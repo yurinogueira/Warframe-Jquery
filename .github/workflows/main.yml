@@ -22,8 +22,8 @@ jobs:
       - name: Deploy
         working-directory: ./src
         env:
-          GIT_USERNAME: ${{ secrets.GIT_USERNAME }}
-          GIT_EMAIL: ${{ secrets.GIT_EMAIL }}
+          GIT_USERNAME: "Yuri Nogueira"
+          GIT_EMAIL: "yurinogueira@id.uff.br"
         run: |
           git config user.name "$GIT_USERNAME" && git config user.email "$GIT_EMAIL"
           npm run deploy
