@@ -1,6 +1,7 @@
+import * as fs from "fs";
+
 (async () => {
-    import { execa } from "execa";
-    import * as fs from "fs";
+    const { execa } = await import("execa");
     try {
         await execa("git", ["checkout", "--orphan", "gh-pages"]);
         console.log("Building started...");
