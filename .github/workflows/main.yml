@@ -19,13 +19,11 @@ jobs:
         working-directory: ./src
         run: npm install
 
-      - name: Set Credentials
+      - name: Deploy
         working-directory: ./src
         env:
           GIT_USERNAME: ${{ secrets.GIT_USERNAME }}
           GIT_EMAIL: ${{ secrets.GIT_EMAIL }}
-        run: git config --global user.name "$GIT_USERNAME" && git config --global user.email "$GIT_EMAIL"
-
-      - name: Deploy
-        working-directory: ./src
-        run: npm run deploy
+        run: |
+          git config user.name "$GIT_USERNAME" && git config user.email "$GIT_EMAIL"
+          npm run deploy
