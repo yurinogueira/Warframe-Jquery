@@ -14,20 +14,18 @@ jobs:
 
       - name: Setup node
         uses: actions/setup-node@v3
-        with:
-          node-version: "16"
 
       - name: Install packages
-        working-directory: ./app
+        working-directory: ./src
         run: npm install
 
       - name: Set Credentials
-        working-directory: ./app
+        working-directory: ./src
         env:
           GIT_USERNAME: ${{ secrets.GIT_USERNAME }}
           GIT_EMAIL: ${{ secrets.GIT_EMAIL }}
         run: git config user.name "$GIT_USERNAME" && git config user.email "$GIT_EMAIL"
 
       - name: Deploy
-        working-directory: ./app
+        working-directory: ./src
         run: npm run deploy
