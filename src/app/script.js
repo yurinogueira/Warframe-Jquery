@@ -33,7 +33,7 @@ export default class MVPPlayer {
     }
 
     getMaxDefenseRounds() {
-        return this._maxDefenseRounds;
+        return this._maxDefenseRounds + " Rounds";
     }
 
     getImage() {
