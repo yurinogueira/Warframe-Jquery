@@ -9,7 +9,6 @@
     "start": "webpack server",
     "deploy": "node scripts/gh-pages-deploy.js"
   },
-  "type": "module",
   "main": "index.js",
   "devDependencies": {
     "@babel/core": "^7.19.1",
