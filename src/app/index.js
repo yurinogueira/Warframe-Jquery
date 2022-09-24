@@ -3,35 +3,35 @@ import MVPPlayer from "./script.js";
 
 const mvpPlayersData = [
     {
-        credits: 1654985.6,
+        platinum: 101000,
         nickname: "FissureVoid",
         maxSurvivalHours: 13.4,
         maxDefenseRounds: 14,
         image: "images/VoidFissure.webp"
     },
     {
-        credits: 38749485.6,
+        platinum: 105000,
         nickname: "JohnProdman",
         maxSurvivalHours: 6.7,
         maxDefenseRounds: 7,
         image: "images/JohnProdman.webp"
     },
     {
-        credits: 578789.6,
+        platinum: 87080,
         nickname: "EveEVe",
         maxSurvivalHours: 2.4,
         maxDefenseRounds: 18,
         image: "images/EveEve.webp"
     },
     {
-        credits: 54898478.6,
+        platinum: 121000,
         nickname: "PPPPlays",
         maxSurvivalHours: 7.7,
         maxDefenseRounds: 12,
         image: "images/PPLays.webp"
     },
     {
-        credits: 4968187.6,
+        platinum: 75000,
         nickname: "PandaSóPanda",
         maxSurvivalHours: 14.1,
         maxDefenseRounds: 10,
@@ -40,7 +40,7 @@ const mvpPlayersData = [
 ];
 
 const mvpPlayers = mvpPlayersData.map(player => new MVPPlayer(
-    player.credits,
+    player.platinum,
     player.nickname,
     player.maxSurvivalHours,
     player.maxDefenseRounds,
@@ -56,7 +56,7 @@ mvpPlayers.map(mvpPlayer => {
         <div class="card-body">
           <h4 class="card-title">${mvpPlayer.getNickname()}</h4>
           <div class="fw-bold">
-            <span class="text-success">Créditos: </span> ${mvpPlayer.getCredits()}
+            <span class="text-success">Dinheiro: </span> ${mvpPlayer.getPlatinumInReais()}
           </div>
           <div class="fw-bold">
             <span class="text-success">Sobrevivência: </span> ${mvpPlayer.getMaxSurvivalHours()}

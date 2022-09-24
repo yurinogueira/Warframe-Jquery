@@ -1,15 +1,16 @@
 export default class MVPPlayer {
-    constructor(credits, nickname, maxSurvivalHours, maxDefenseRounds, image) {
-        this._credits = credits;
+    constructor(platinum, nickname, maxSurvivalHours, maxDefenseRounds, image) {
+        this._platinum = platinum;
         this._nickname = nickname;
         this._maxSurvivalHours = maxSurvivalHours;
         this._maxDefenseRounds = maxDefenseRounds;
         this._image = image;
     }
 
-    getCredits() {
+    getPlatinumInReais() {
         const formatter = new Intl.NumberFormat("pt-BR", {style: "currency", currency: "BRL"});
-        return formatter.format(this._credits);
+        const amountInReais = this._platinum / 10.75;
+        return formatter.format(amountInReais);
     }
 
     getNickname() {
